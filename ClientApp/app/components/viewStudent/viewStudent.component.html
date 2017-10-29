@@ -1,0 +1,77 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <h3>Lista Studenti</h3>
+        <br />
+        <br />
+        <br />
+    </div>
+
+</div>
+<div class="row">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        S.No.
+                    </th>
+                    <th>
+                        Nome
+                    </th>
+                    <th>
+                        Cognome
+                    </th>
+                    <th>
+                        Matricola
+                    </th>
+                    <th>
+                        Corso
+                    </th>
+                    <th>
+                        Anno Iscrizione
+                    </th>
+                    <th>
+                        Azione
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let empData of StudentList; let i = index; trackBy: StudenteId">
+                    <td>
+                        {{i+1}}
+                    </td>
+                    <td>
+                        {{empData.nome}}
+                    </td>
+                    <td>
+                        {{empData.cognome}}
+                    </td>
+                    <td>
+                        {{empData.matricola}}
+                    </td>
+                    <td>
+                        {{empData.course}}
+                    </td>
+                    <td>
+                        {{empData.annoIscrizione | date:'yyyy'}}
+                    </td>
+                    <td>
+
+                        <a [routerLink]="['/student-detail/',empData.studenteId]"
+                           class="btn btn-primary">
+                            Dettagli
+                        </a>
+                        <a [routerLink]="['/edit-student/',empData.studenteId]"
+                           class="btn btn-success">
+                            Modifica
+                        </a>
+                        <a class="btn btn-danger">
+                            Elimina
+                        </a>
+                    </td>
+                </tr>
+
+        </table>
+    </div>
+</div> 
