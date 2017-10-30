@@ -28,13 +28,15 @@ namespace PSC.Controllers
                                  select new
                                  {
                                      CorsoId = data.CorsoId,
-                                     Titolo = data.Titolo
+                                     Titolo = data.Titolo,
+                                     DurataAnni = data.DurataAnni
                                  }).ToListAsync();
             Course.ForEach(x =>
             {
                 Course pro = new Course();
                 pro.CorsoId = x.CorsoId;
                 pro.Titolo = x.Titolo;
+                pro.DurataAnni = x.DurataAnni;
                 course_.Add(pro);
             });
 

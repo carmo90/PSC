@@ -8,27 +8,30 @@ import { FormGroup, FormControl, Validators, FormsModule, ReactiveFormsModule } 
     templateUrl: './newStudent.component.html'
 })
 export class newStudentComponent {
-    public StudentList = [];
+    public CourseList = [];
     public formData: FormGroup;
     public constructor(private empService: StudentServices) {
         this.empService.getCourseList()
             .subscribe(
-            (data: Response) => (this.StudentList = data.json())
+            (data: Response) => (this.CourseList = data.json())
             );
 
         this.formData = new FormGroup({
             'Nome': new FormControl('', [Validators.required]),
             'Cognome': new FormControl('', Validators.required),
             'Matricola': new FormControl('', Validators.required),
-            'Corso': new FormControl(0, [Validators.required, this.customValidator])
+            'Corso': new FormControl(0, Validators.required)
         });
     } 
-
+    /*
     customValidator(control: FormControl): { [s: string]: boolean } {
-        control.value == "0" 
+        if(control.value == "0") 
             return { data: true };
+        else {
+            return { data: false };
+        }
         
-    } 
+    } */
 
     submitData() {
         if (this.formData.valid) {
