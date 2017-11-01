@@ -32,7 +32,7 @@ namespace PSC.Controllers
                                       emp.StudenteId,
                                       emp.Nome,
                                       emp.Cognome,
-                                      emp.AnnoIscrizione,
+             //                         emp.AnnoIscrizione,
                                       emp.Matricola,
                                       pro.Titolo
 
@@ -45,7 +45,7 @@ namespace PSC.Controllers
                 Obj.Nome = x.Nome;
                 Obj.Cognome = x.Cognome;
                 Obj.Matricola = x.Matricola;
-                Obj.AnnoIscrizione = x.AnnoIscrizione;
+            //    Obj.AnnoIscrizione = x.AnnoIscrizione;
                 Obj.Course = x.Titolo;
                 ilIst.Add(Obj);
             });

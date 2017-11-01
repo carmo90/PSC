@@ -11,9 +11,9 @@ export class filterSearch implements PipeTransform {
         }
         else {
             let filter = args.toLocaleLowerCase();
-            return filter ? value.filter((Student: string) => (Student.Nome.toLocaleLowerCase().indexOf(filter) != -1)
+            return filter ? value.filter((Student: any) => (Student.nome.toLocaleLowerCase().indexOf(filter) != -1)
                 || (Student.cognome.toLocaleLowerCase().indexOf(filter) != -1)
-                || (Student.corso.toLocaleLowerCase().indexOf(filter) != -1)
+                || (Student.matricola.toLocaleLowerCase().indexOf(filter) != -1)
             ) : value;
         }
     }

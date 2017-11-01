@@ -49,7 +49,7 @@
             </thead>
             <tbody>
 
-                <tr *ngFor="let empData of StudentList | searchFiler=search.value; let i = index; trackBy: studenteId">
+                <tr *ngFor="let empData of StudentList | searchFilter:search.value; let i = index; trackBy: studenteId">
                     <td>
                         {{i+1}}
                     </td>
@@ -65,9 +65,7 @@
                     <td>
                         {{empData.course}}
                     </td>
-                    <td>
-                        {{empData.annoIscrizione | date:'yyyy'}}
-                    </td>
+               
                     <td>
 
                         <a [routerLink]="['/student-detail/',empData.studenteId]"

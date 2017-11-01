@@ -11,7 +11,7 @@ namespace PSC.ViewModels
         public string Nome { get; set; }
         public string Cognome { get; set; }
         public string Matricola { get; set; }
-        public DateTime AnnoIscrizione { get; set; }
+      //  public DateTime AnnoIscrizione { get; set; }
         public string Course { get; set; }
     }
 }

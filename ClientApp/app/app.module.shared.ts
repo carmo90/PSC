@@ -14,7 +14,7 @@ import { editStudentComponent } from './components/editStudent/editStudent.compo
 import { viewStudentComponent } from './components/viewStudent/viewStudent.component';
 import { StudentServices } from './services/service';
 
-import { searchFilter } from './search/search';
+import { filterSearch } from './search/search';
 
 @NgModule({
     declarations: [
@@ -25,7 +25,7 @@ import { searchFilter } from './search/search';
         newStudentComponent,
         editStudentComponent,
         viewStudentComponent,
-        searchFilter
+        filterSearch
 
     ],
 

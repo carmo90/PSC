@@ -35,7 +35,7 @@
     <None Remove="ClientApp\app\components\editStudent\editStudent.component.ts" />
     <None Remove="ClientApp\app\components\newStudent\newStudent.component.ts" />
     <None Remove="ClientApp\app\components\viewStudent\viewStudent.component.ts" />
-    <None Remove="ClientApp\search\search.ts" />
+    <None Remove="ClientApp\app\search\search.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,7 +44,7 @@
     <TypeScriptCompile Include="ClientApp\app\components\studentDetails\studentDetails.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\viewStudent\viewStudent.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\services\service.ts" />
-    <TypeScriptCompile Include="ClientApp\search\search.ts" />
+    <TypeScriptCompile Include="ClientApp\app\search\search.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
