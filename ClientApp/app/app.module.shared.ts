@@ -12,7 +12,9 @@ import { studentDetailComponent } from './components/studentDetails/studentdetai
 import { newStudentComponent } from './components/newStudent/newStudent.component';
 import { editStudentComponent } from './components/editStudent/editStudent.component';
 import { viewStudentComponent } from './components/viewStudent/viewStudent.component';
-import { StudentServices } from './services/service'
+import { StudentServices } from './services/service';
+
+import { searchFilter } from './search/search';
 
 @NgModule({
     declarations: [
@@ -22,7 +24,8 @@ import { StudentServices } from './services/service'
         studentDetailComponent,
         newStudentComponent,
         editStudentComponent,
-        viewStudentComponent
+        viewStudentComponent,
+        searchFilter
 
     ],
 
